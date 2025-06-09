@@ -8,6 +8,12 @@ import Header from "../components/Header.astro";
   <div class="content-main">
     <div class="content">
       <h2>Web/Mobile</h2>
+      <div>
+        <button class="btn-projects">
+          <a href="#projects">Projects</a>
+        </button>
+        <span class="material-icons">arrow_forward</span>
+      </div>
     </div>
     <div class="content">
       <p>I am passionate about creating innovative and efficient solutions.</p>
@@ -17,10 +23,6 @@ import Header from "../components/Header.astro";
 </section>
 
 <style>
-  .content-main {
-    padding: 4rem 8rem;
-  }
-
   .title {
     height: 100dvh;
     width: 100%;
@@ -30,12 +32,25 @@ import Header from "../components/Header.astro";
   flex-direction: column;
   justify-content: center; */
   }
+  .content-main {
+    padding: 4rem 8rem;
+  }
+
+  span {
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 50%;
+  }
 
   .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* padding-left: 5em; */
+  }
+  a {
+    text-decoration: none;
+    color: black;
   }
 
   h2 {
@@ -45,10 +60,10 @@ import Header from "../components/Header.astro";
   }
 
   .content p {
-    color: white;
+    color: rgb(209, 209, 209);
     /* font-family: "Roboto", sans-serif; */
     font-size: 1.5em;
-    width: 45%;
+    width: 30%;
   }
 
   .btn-projects {

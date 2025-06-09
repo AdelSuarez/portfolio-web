@@ -6,32 +6,45 @@ import Content from "../components/Content.astro";
   <h2>Proyects/</h2>
 
   <article>
-    <h3>BijiApp</h3>
-    <p>
-      BijiApp is a mobile application designed to help users manage their
-      personal finances effectively. It offers features such as expense
-      tracking, budget planning, and financial goal setting.
-    </p>
-    <div>
-      <img src="/dart_.svg" alt="" />
-      <img src="/flutter_.svg" alt="" />
-      <img src="/database.svg" alt="" />
+    <div class="info-project">
+      <h3>BijiApp</h3>
+      <p>
+        BijiApp is a mobile application designed to help users manage their
+        personal finances effectively. It offers features such as expense
+        tracking, budget planning, and financial goal setting.
+      </p>
+      <div>
+        <img class="icon" src="/dart_.svg" alt="" />
+        <img class="icon" src="/flutter_.svg" alt="" />
+        <img class="icon" src="/database.svg" alt="" />
+      </div>
     </div>
+
+    <img src="bijiapp_cap1.png" alt="" />
   </article>
 </Content>
 
 <style>
+  article {
+    display: flex;
+    gap: 2em;
+    margin: 2em;
+  }
   h2 {
     font-size: 2em;
     font-weight: 600;
   }
 
-  img {
+  .icon {
     width: 2em;
     height: 2em;
   }
+  .info-project {
+    width: 40%;
+  }
 
-  article {
-    margin: 2em;
+  img {
+    height: 40em;
+    border-radius: 0.5em;
   }
 </style>
