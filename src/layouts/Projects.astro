@@ -1,31 +1,35 @@
----
-import Content from "../components/Content.astro";
----
-
-<Content id="projects">
-  <h2>Proyects/</h2>
+<!-- <h2>Proyects/</h2>
 
   <article>
     <div class="info-project">
       <h3>BijiApp</h3>
       <p>
-        BijiApp is a mobile application designed to help users manage their
-        personal finances effectively. It offers features such as expense
-        tracking, budget planning, and financial goal setting.
+        BijiApp is a mobile application designed to help students keep track of
+        their assessment activities during a study period.
       </p>
-      <div>
-        <img class="icon" src="/dart_.svg" alt="" />
-        <img class="icon" src="/flutter_.svg" alt="" />
-        <img class="icon" src="/database.svg" alt="" />
+      <div class="technologies">
+        <span class="icon-tech">
+          <img class="icon" src="/dart_.svg" alt="" />
+          Dart
+        </span>
+        <span class="icon-tech">
+          <img class="icon" src="/flutter_.svg" alt="" />
+            Flutter
+        </span>
+        <span class="icon-tech">
+          <img class="icon" src="/database.svg" alt="" />
+          SQL
+        </span>
       </div>
     </div>
-
     <img src="bijiapp_cap1.png" alt="" />
-  </article>
-</Content>
+  </article> -->
+<section>
+  <h2>Projects</h2>
+</section>
 
 <style>
-  article {
+  /* article {
     display: flex;
     gap: 2em;
     margin: 2em;
@@ -40,6 +44,7 @@ import Content from "../components/Content.astro";
     height: 2em;
   }
   .info-project {
+    padding: 1em;
     width: 40%;
   }
 
@@ -47,4 +52,25 @@ import Content from "../components/Content.astro";
     height: 40em;
     border-radius: 0.5em;
   }
+
+  .icon-tech {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1.2em;
+    border-radius: 2em;
+    gap: 0.5em;
+
+    border: 1px solid white;
+  }
+  .icon-tech img {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .technologies {
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+    align-items: center;
+  } */
 </style>

@@ -3,8 +3,8 @@ import "../styles/constants.css";
 ---
 
 <header>
-  <span>Adel <br /> Suarez</span>
-  <nav>
+  <span>Adel Suarez</span>
+  <!-- <nav>
     <ul>
       <li>
         <a href="/">Home/</a>
@@ -19,9 +19,9 @@ import "../styles/constants.css";
         <a href="/contact">Contact/</a>
       </li>
     </ul>
-  </nav>
+  </nav> -->
   <div class="lang">
-    <span>es</span>
+    <span>es</span>/
     <span>en</span>
   </div>
 </header>
@@ -29,14 +29,13 @@ import "../styles/constants.css";
 <style>
   header {
     width: 100%;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: sticky;
     background-color: var(--background-color);
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5em 1rem;
+    border-bottom: 1px solid #444444;
   }
 
   span {
@@ -44,7 +43,7 @@ import "../styles/constants.css";
     font-size: 1.5rem;
     font-weight: bold;
   }
-  ul {
+  /* ul {
     display: flex;
     list-style: none;
     gap: 3rem;
@@ -53,16 +52,13 @@ import "../styles/constants.css";
   a {
     color: #fff;
     text-decoration: none;
-  }
-
+  } */
+  /* 
   a:hover {
     color: var(--primary-color);
     text-decoration: underline;
   }
-  .lang {
-    display: flex;
-    flex-direction: column;
-  }
+     */
 
   .lang span:hover {
     color: var(--primary-color);

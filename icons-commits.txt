@@ -1,0 +1,7 @@
+Icons for Commits 
+🐛 -> bugs
+⬆️ -> updates
+♻️ -> refactors
+✨ -> New features
+✅ -> tasks completed
+📝 -> documentation

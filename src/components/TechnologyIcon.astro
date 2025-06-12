@@ -1,0 +1,30 @@
+---
+interface Props {
+  name: string;
+  urlIcon: string;
+  alt?: string;
+}
+
+const { name, urlIcon, alt = "" } = Astro.props;
+---
+
+<span class="icon-tech">
+  <img class="icon" src={urlIcon} alt={alt} />
+  {name}
+</span>
+
+<style>
+  .icon-tech {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1.2em;
+    border-radius: 2em;
+    gap: 0.5em;
+
+    border: 1px solid white;
+  }
+  .icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+</style>
