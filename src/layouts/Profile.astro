@@ -1,15 +1,18 @@
 ---
-// import "../styles/title.css";
-import Header from "../components/Header.astro";
 import TechnologyIcon from "../components/TechnologyIcon.astro";
 ---
 
 <section class="profile-section">
-  <!-- <Header /> -->
   <section class="profile">
-    <img src="/perfil.jpg" alt="" />
+    <img src="profile.jpg" class="img-profile" alt="" />
     <div class="profile-info">
-      <h1>Adel Suarez</h1>
+      <div class="content-with-icon">
+        <h1>Adel Suarez</h1>
+        <a href="https://github.com/AdelSuarez" target="_blank" rel="noopener noreferrer">
+          <img src="icons/github_.svg" class="icon btn-icon" alt="" />
+        </a>
+      </div>
+
       <h2>Web/Mobile Developer</h2>
       <div class="location">
         <span class="material-icons">location_on</span>
@@ -18,39 +21,36 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     </div>
   </section>
   <section class="about">
-    <h3>About me</h3>
+    <h2>About me</h2>
     <p>
-      I am a web and mobile developer with a passion for creating innovative and
-      efficient solutions. I have experience in developing applications using
-      technologies such as Flutter, Dart, and Firebase.
+      I'm a web and mobile developer passionate about creating innovative and
+      efficient solutions. I have experience developing applications with
+      technologies such as Flutter and Dart for mobile, and TypeScript with
+      React for the web.
     </p>
+    <div class="content-with-icon">
+      <img src="icons/linux_.svg" class="icon" alt="" />
+      <p>
+        I'm passionate about everything related to Linux distributions, and I
+        have been using Ubuntu as my main system for over a year.
+      </p>
+    </div>
   </section>
   <section class="technologies-section">
     <h3>Technologies</h3>
     <div class="technologies">
-      <TechnologyIcon name="Dart" urlIcon="/dart_.svg" />
-      <TechnologyIcon name="Flutter" urlIcon="/flutter_.svg" />
-      <TechnologyIcon name="React" urlIcon="/react_.svg" />
-      <TechnologyIcon name="JavaScript" urlIcon="/js_.svg" />
+      <TechnologyIcon name="python" urlIcon="icons/python_.svg" />
+      <TechnologyIcon name="Dart" urlIcon="icons/dart_.svg" />
+      <TechnologyIcon name="Flutter" urlIcon="icons/flutter_.svg" />
+      <TechnologyIcon name="React" urlIcon="icons/react_.svg" />
+      <TechnologyIcon name="HTML" urlIcon="icons/html_.svg" />
+      <TechnologyIcon name="CSS" urlIcon="icons/css_.svg" />
+      <TechnologyIcon name="JavaScript" urlIcon="icons/js_.svg" />
+      <TechnologyIcon name="TypeScript" urlIcon="icons/ts_.svg" />
     </div>
     <hr />
   </section>
 </section>
-<!-- <div class="content">
-      <h2>Web/Mobile</h2>
-      <div>
-        <button class="btn-projects">
-          <a href="#projects">Projects</a>
-        </button>
-        <span class="material-icons">arrow_forward</span>
-      </div>
-    </div>
-    <div class="content">
-      <p>I am passionate about creating innovative and efficient solutions.</p>
-      <h2>Developer</h2>
-    </div> -->
-
-<!-- <p>HEY, I'M ADEL SUAREZ, A WEB/MOBILE DEVELOPER.</p> -->
 
 <style>
   .profile-section {
@@ -66,13 +66,19 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     gap: 2em;
   }
 
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
   .profile-info {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
   }
 
-  .profile img {
+  .img-profile {
     width: 10em;
     border-radius: 50%;
     object-fit: cover;
@@ -92,56 +98,27 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     gap: 1em;
   }
 
-  /* ------------------- */
-  /* .title { */
-  /* height: 100dvh; */
-  /* width: 100%;
-    padding: 1em;
-    padding-top: 5em; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-  /* } */
-  /* .content-main {
-    padding: 4rem 8rem;
-  } */
-
-  /* span {
-    background-color: white;
-    padding: 0.5em;
-    border-radius: 50%;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-  }
-
-  h2 {
-    font-size: 8em;
-    color: white;
+  h1 {
+    font-size: 2.5em;
     font-weight: 600;
+    margin: 0;
   }
 
-  .content p {
-    color: rgb(209, 209, 209);
-    font-size: 1.5em;
-    width: 30%;
+  .content-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+  .icon {
+    width: 2em;
   }
 
-  .btn-projects {
-    background-color: white;
-    color: black;
-    padding: 0.2em 2em;
-    border: none;
-    border-radius: 10em;
-    font-size: 1.8em;
-    font-style: italic;
-    font-weight: bold;
-  } */
+  .btn-icon {
+    cursor: pointer;
+  }
+
+  .btn-icon:hover {
+    filter: brightness(0.8);
+  }
+}
 </style>
