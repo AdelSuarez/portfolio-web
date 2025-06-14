@@ -45,11 +45,19 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
       <TechnologyIcon name="React" urlIcon="icons/react_.svg" />
       <TechnologyIcon name="HTML" urlIcon="icons/html_.svg" />
       <TechnologyIcon name="CSS" urlIcon="icons/css_.svg" />
-      <TechnologyIcon name="JavaScript" urlIcon="icons/js_.svg" />
+      <!-- <TechnologyIcon name="JavaScript" urlIcon="icons/js_.svg" /> -->
       <TechnologyIcon name="TypeScript" urlIcon="icons/ts_.svg" />
     </div>
-    <hr />
   </section>
+  <section>
+    <h3>tools</h3>
+    <div class="tools">
+      <TechnologyIcon name="Git" urlIcon="icons/git_.svg" />
+      <TechnologyIcon name="GitHub" urlIcon="icons/github_.svg" />
+      <TechnologyIcon name="Figma" urlIcon="icons/figma_.svg" />
+    </div>
+  </section>
+  <hr />
 </section>
 
 <style>
@@ -91,7 +99,7 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     gap: 0.5em;
   }
 
-  .technologies {
+  .technologies, .tools {
     margin: 1em 0;
     display: flex;
     flex-wrap: wrap;

@@ -1,0 +1,103 @@
+---
+interface Course {
+  title: string;
+  institution: string;
+  url: string;
+  icon: string;
+}
+const listCourses: Course[] = [
+  {
+    title: "Web Development Fundamentals",
+    institution: "IBM",
+    url: "https://www.credly.com/badges/7062a619-b518-4df7-83c4-20091f4003ed/public_url",
+    icon: "/icons/ibm_.svg",
+  },
+  {
+    title: "Universidad HTML 2021-Aprende HTML desde Cero hasta Experto",
+    institution: "Udemy",
+    url: "https://udemy-certificate.s3.amazonaws.com/image/UC-48d3cf64-8cd5-43a6-9d0d-842431a7945d.jpg",
+    icon: "/icons/udemy_.svg",
+  },
+  {
+    title: "Universidad CSS 2021-Aprende CSS desde Cero hasta Experto",
+    institution: "Udemy",
+    url: "https://udemy-certificate.s3.amazonaws.com/image/UC-e97127eb-81bd-4810-8132-7fd31725b8bc.jpg",
+    icon: "/icons/udemy_.svg",
+  },
+  {
+    title: "Aprende JavaScript ES9, HTML, CSS3 y NodeJS desde cero",
+    institution: "Udemy",
+    url: "https://udemy-certificate.s3.amazonaws.com/image/UC-18345318-d615-44d0-a781-254810af67e2.jpg",
+    icon: "/icons/udemy_.svg",
+  },
+  {
+    title: "Flutter: Tu guía completa para IOS y Android - 2022",
+    institution: "Udemy",
+    url: "https://udemy-certificate.s3.amazonaws.com/image/UC-65e45387-0d74-4df4-8bc6-8a9872ddcf21.jpg",
+    icon: "/icons/udemy_.svg",
+  },
+];
+---
+
+<section class="content-training">
+  <h2>Training</h2>
+  <section class="content-training__list">
+    {
+      listCourses.map((course) => {
+        return (
+          <article class="content-training__item">
+            <img class="icon" src={course.icon} alt="" />
+            <div class="content-training__details">
+              <div>
+                <h3>{course.title}</h3>
+                <span>{course.institution}</span>
+              </div>
+              <a href={course.url} target="_blank">
+                <span class="material-icons">link</span>
+              </a>
+            </div>
+          </article>
+        );
+      })
+    }
+  </section>
+</section>
+
+<style>
+  .content-training {
+    margin: 1em 0;
+  }
+
+  .content-training__item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0.5em 0;
+  }
+
+  .content-training__item a {
+    color: white;
+  }
+
+  .content-training__item a:hover {
+    color: var(--primary-color);
+  }
+
+  .content-training__details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .content-training__list {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .icon {
+    width: 2.5em;
+  }
+</style>

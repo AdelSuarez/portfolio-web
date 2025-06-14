@@ -1,0 +1,50 @@
+---
+import "../styles/constants.css";
+---
+
+<footer class="footer-content">
+  <hr />
+  <div class="footer-content__email">
+    <span class="material-icons">email</span>
+    <span class="email"> adel90suarez@gmail.com</span>
+    <span class="material-icons icon">content_copy</span>
+  </div>
+  <div class="footer-content__made">
+    <p>Made with ❤️ by Adel Suarez</p>
+  </div>
+</footer>
+
+<style>
+  .footer-content {
+    margin: 1em 0;
+    padding: 1em 0;
+  }
+
+  .footer-content__email {
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .email {
+    background-color: var(--primary-color);
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+  }
+
+  .icon {
+    padding: 0.2em;
+    border-radius: 0.3em;
+    background-color: var(--primary-color);
+  }
+
+  .footer-content__made {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-content__made p {
+    margin: 0.5em 0;
+  }
+</style>
