@@ -1,20 +1,17 @@
 ---
 import "../styles/constants.css";
+import Icon from "./Icon.astro";
 ---
 
 <header>
   <span>Adel Suarez</span>
 
-  <div class="lang">
-    <span>es</span>/
-    <span>en</span>
-  </div>
+  <Icon url="https://github.com/AdelSuarez" urlIcon="icons/github_.svg" />
 </header>
 
 <style>
   header {
     width: 100%;
-    position: sticky;
     background-color: var(--background-color);
     display: flex;
     align-items: center;
@@ -27,11 +24,5 @@ import "../styles/constants.css";
     color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
-  }
-
-  .lang span:hover {
-    color: var(--primary-color);
-    cursor: pointer;
-    text-decoration: underline;
   }
 </style>

@@ -1,19 +1,19 @@
 ---
+import Icon from "../components/Icon.astro";
 import TechnologyIcon from "../components/TechnologyIcon.astro";
 ---
 
 <section class="profile-section">
   <section class="profile">
-    <img src="profile.jpg" class="img-profile" alt="" />
+    <img src="profile-min.jpg" class="img-profile" alt="" />
     <div class="profile-info">
       <div class="content-with-icon">
         <h1>Adel Suarez</h1>
-        <a href="https://github.com/AdelSuarez" target="_blank" rel="noopener noreferrer">
-          <img src="icons/github_.svg" class="icon btn-icon" alt="" />
-        </a>
+         <Icon url="https://github.com/AdelSuarez" urlIcon="icons/github_.svg" />
+
       </div>
 
-      <h2>Web/Mobile Developer</h2>
+      <h2>Desarrollardor Web/Movil</h2>
       <div class="location">
         <span class="material-icons">location_on</span>
         <p>Venezuela - Caracas</p>
@@ -21,23 +21,19 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     </div>
   </section>
   <section class="about">
-    <h2>About me</h2>
+    <h2>/Hacerca de mi.</h2>
     <p>
-      I'm a web and mobile developer passionate about creating innovative and
-      efficient solutions. I have experience developing applications with
-      technologies such as Flutter and Dart for mobile, and TypeScript with
-      React for the web.
+      Soy un desarrollador web y móvil apasionado por crear soluciones innovadoras y eficientes. Tengo experiencia en el desarrollo de aplicaciones con tecnologías como Flutter y Dart para dispositivos móviles, y TypeScript con React para la web.
     </p>
     <div class="content-with-icon">
       <img src="icons/linux_.svg" class="icon" alt="" />
       <p>
-        I'm passionate about everything related to Linux distributions, and I
-        have been using Ubuntu as my main system for over a year.
+        Me apasiona todo lo relacionado con el mundo de Linux, llevo mas de un años usando distribuciones linux como sistema principal.
       </p>
     </div>
   </section>
   <section class="technologies-section">
-    <h3>Technologies</h3>
+    <h3>/Tecnologias.</h3>
     <div class="technologies">
       <TechnologyIcon name="python" urlIcon="icons/python_.svg" />
       <TechnologyIcon name="Dart" urlIcon="icons/dart_.svg" />
@@ -50,7 +46,7 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     </div>
   </section>
   <section>
-    <h3>tools</h3>
+    <h3>/Herramientas.</h3>
     <div class="tools">
       <TechnologyIcon name="Git" urlIcon="icons/git_.svg" />
       <TechnologyIcon name="GitHub" urlIcon="icons/github_.svg" />
@@ -121,12 +117,6 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     width: 2em;
   }
 
-  .btn-icon {
-    cursor: pointer;
-  }
 
-  .btn-icon:hover {
-    filter: brightness(0.8);
-  }
 }
 </style>

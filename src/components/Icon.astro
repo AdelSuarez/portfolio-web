@@ -1,0 +1,41 @@
+---
+interface Props {
+  url: string;
+  urlIcon: string;
+  sizeSmall?: boolean;
+  alt?: string;
+}
+
+const { url, urlIcon, sizeSmall = false, alt }: Props = Astro.props;
+---
+
+<a href={url} target="_blank" rel="noopener noreferrer">
+  <img
+    src={urlIcon}
+    class=`icon btn-icon ${sizeSmall && "size-small"} `
+    alt={alt}
+  />
+</a>
+
+<style>
+  a {
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    transition: all 0.3s ease;
+    width: 2em;
+  }
+
+  .btn-icon {
+    cursor: pointer;
+  }
+
+  .btn-icon:hover {
+    filter: brightness(0.8);
+  }
+
+  .size-small {
+    width: 1.5em;
+  }
+</style>

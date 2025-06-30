@@ -1,20 +1,75 @@
 ---
+import Icon from "../components/Icon.astro";
 import "../styles/constants.css";
 ---
 
 <footer class="footer-content">
   <hr />
+
   <div class="footer-content__email">
     <span class="material-icons">email</span>
     <span class="email"> adel90suarez@gmail.com</span>
-    <span class="material-icons icon">content_copy</span>
+    <button id="copy-email-icon" type="button">
+      <span class="material-icons icon content-copy" id="icon-span"
+        >content_copy</span
+      >
+    </button>
   </div>
   <div class="footer-content__made">
-    <p>Made with ❤️ by Adel Suarez</p>
+    <p>Adel Suarez | Construido con Astro</p>
+    <img src="icons/astro.svg" alt="" />
+    <Icon
+      url="https://github.com/AdelSuarez/portfolio-web"
+      urlIcon="icons/github_.svg"
+    />
   </div>
 </footer>
 
+<script>
+  let email = "adel90suarez@gmail.com";
+  const copyIcon = document.getElementById("copy-email-icon");
+  const iconSpan = document.getElementById("icon-span");
+
+  const copyEmailToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      if (iconSpan) {
+        iconSpan.innerHTML = "check_circle";
+        iconSpan.classList.add("animated");
+      }
+
+      setTimeout(() => {
+        if (iconSpan) {
+          iconSpan.innerHTML = "content_copy";
+          iconSpan.classList.remove("animated");
+        }
+      }, 2000); // Cambia el icono de nuevo después de 1 segundo
+    } catch (error) {
+      console.error("Error al copiar al portapapeles:", error);
+    }
+  };
+
+  if (copyIcon) {
+    copyIcon.addEventListener("click", copyEmailToClipboard);
+  }
+</script>
+
 <style>
+  @keyframes pop {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .animated {
+    animation: pop 0.3s;
+  }
   .footer-content {
     margin: 1em 0;
     padding: 1em 0;
@@ -39,12 +94,29 @@ import "../styles/constants.css";
     background-color: var(--primary-color);
   }
 
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
   .footer-content__made {
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .footer-content__made p {
     margin: 0.5em 0;
+  }
+  .footer-content__made img {
+    width: 2em;
+    vertical-align: middle;
+  }
+
+  .content-copy {
+    color: white;
   }
 </style>
