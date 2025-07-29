@@ -46,7 +46,7 @@ const listCourses: Course[] = [
       listCourses.map((course) => {
         return (
           <article class="content-training__item">
-            <img class="icon" src={course.icon} alt="" />
+            <img class="icon" src={`/portfolio-web${course.icon}`} alt="" />
             <div class="content-training__details">
               <div>
                 <h3>{course.title}</h3>

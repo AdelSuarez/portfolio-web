@@ -84,7 +84,11 @@ const projects: Project[] = [
               </div>
             </div>
             <div class={`img-project ${colors[index]}`}>
-              <img class={`${project.type}-img`} src={project.img} alt="" />
+              <img
+                class={`${project.type}-img`}
+                src={`/portfolio-web${project.img}`}
+                alt=""
+              />
             </div>
           </article>
         );
