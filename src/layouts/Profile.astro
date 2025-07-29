@@ -9,10 +9,13 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     <div class="profile-info">
       <div class="content-with-icon">
         <h1>Adel Suarez</h1>
-         <Icon url="https://github.com/AdelSuarez" urlIcon="icons/github_.svg" />
-
+        <div>
+          <Icon
+            url="https://github.com/AdelSuarez"
+            urlIcon="icons/github_.svg"
+          />
+        </div>
       </div>
-
       <h2>Desarrollardor Web/Movil</h2>
       <div class="location">
         <span class="material-icons">location_on</span>
@@ -21,19 +24,23 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     </div>
   </section>
   <section class="about">
-    <h2>/Hacerca de mi.</h2>
+    <h2 class="title-section">/Hacerca de mi.</h2>
     <p>
-      Soy un desarrollador web y móvil apasionado por crear soluciones innovadoras y eficientes. Tengo experiencia en el desarrollo de aplicaciones con tecnologías como Flutter y Dart para dispositivos móviles, y TypeScript con React para la web.
+      Soy un desarrollador web y móvil apasionado por crear soluciones
+      innovadoras y eficientes. Tengo experiencia en el desarrollo de
+      aplicaciones con tecnologías como Flutter y Dart para dispositivos
+      móviles, y TypeScript con React para la web.
     </p>
     <div class="content-with-icon">
       <img src="icons/linux_.svg" class="icon" alt="" />
       <p>
-        Me apasiona todo lo relacionado con el mundo de Linux, llevo mas de un años usando distribuciones linux como sistema principal.
+        Me apasiona todo lo relacionado con el mundo de Linux. Llevo más de un
+        año usando distribuciones Linux como sistema principal.
       </p>
     </div>
   </section>
   <section class="technologies-section">
-    <h3>/Tecnologias.</h3>
+    <h3 class="title-section">/Tecnologias.</h3>
     <div class="technologies">
       <TechnologyIcon name="python" urlIcon="icons/python_.svg" />
       <TechnologyIcon name="Dart" urlIcon="icons/dart_.svg" />
@@ -42,11 +49,11 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
       <TechnologyIcon name="HTML" urlIcon="icons/html_.svg" />
       <TechnologyIcon name="CSS" urlIcon="icons/css_.svg" />
       <!-- <TechnologyIcon name="JavaScript" urlIcon="icons/js_.svg" /> -->
-      <TechnologyIcon name="TypeScript" urlIcon="icons/ts_.svg" />
+      <TechnologyIcon name="TypeScript" urlIcon="icons/typescript_.svg" />
     </div>
   </section>
   <section>
-    <h3>/Herramientas.</h3>
+    <h3 class="title-section">/Herramientas.</h3>
     <div class="tools">
       <TechnologyIcon name="Git" urlIcon="icons/git_.svg" />
       <TechnologyIcon name="GitHub" urlIcon="icons/github_.svg" />
@@ -68,6 +75,11 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     display: flex;
     align-items: center;
     gap: 2em;
+  }
+
+  .title-section {
+    /* color: var(--primary-color); */
+    font-style: italic;
   }
 
   .about {
@@ -95,7 +107,8 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     gap: 0.5em;
   }
 
-  .technologies, .tools {
+  .technologies,
+  .tools {
     margin: 1em 0;
     display: flex;
     flex-wrap: wrap;
@@ -117,6 +130,30 @@ import TechnologyIcon from "../components/TechnologyIcon.astro";
     width: 2em;
   }
 
+  @media (max-width: 676px) {
+    .profile {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6em;
+    }
+  }
 
-}
+  @media (max-width: 425px) {
+    .profile-info {
+      /* justify-content: center; */
+      align-items: center;
+    }
+
+    .profile-info h2 {
+      text-align: center;
+      font-size: 1em;
+    }
+    .content-with-icon div {
+      display: none;
+    }
+
+    .content-with-icon img {
+      display: none;
+    }
+  }
 </style>

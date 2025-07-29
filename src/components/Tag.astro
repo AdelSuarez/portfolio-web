@@ -1,0 +1,27 @@
+---
+interface Props {
+  tech: string;
+}
+
+const { tech } = Astro.props;
+---
+
+<span class="icon-lenguage">
+  <img class="icon" src={`icons/${tech.toLowerCase()}_.svg`} alt="" />
+  {tech}
+</span>
+
+<style>
+  .icon-lenguage {
+    padding: 0.2em 1em;
+    border-radius: 1em;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .icon {
+    width: 1em;
+  }
+</style>

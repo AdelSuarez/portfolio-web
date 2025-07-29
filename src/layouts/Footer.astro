@@ -7,7 +7,7 @@ import "../styles/constants.css";
   <hr />
 
   <div class="footer-content__email">
-    <span class="material-icons">email</span>
+    <span class="material-icons email-icon">email</span>
     <span class="email"> adel90suarez@gmail.com</span>
     <button id="copy-email-icon" type="button">
       <span class="material-icons icon content-copy" id="icon-span"
@@ -118,5 +118,11 @@ import "../styles/constants.css";
 
   .content-copy {
     color: white;
+  }
+
+  @media (max-width: 375px) {
+    .email-icon {
+      display: none;
+    }
   }
 </style>

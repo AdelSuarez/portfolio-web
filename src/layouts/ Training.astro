@@ -40,7 +40,7 @@ const listCourses: Course[] = [
 ---
 
 <section class="content-training">
-  <h2>/Conocimientos.</h2>
+  <h2 class="title-section">/Conocimientos.</h2>
   <section class="content-training__list">
     {
       listCourses.map((course) => {
@@ -73,6 +73,11 @@ const listCourses: Course[] = [
     align-items: center;
     gap: 1em;
     padding: 0.5em 0;
+  }
+
+  .title-section {
+    /* color: var(--primary-color); */
+    font-style: italic;
   }
 
   .content-training__item a {
