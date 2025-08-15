@@ -27,6 +27,35 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
 
+    <!-- Metadata -->
+    <meta
+      name="description"
+      content="Soy un desarrollador web y móvil apasionado por crear soluciones
+      innovadoras y eficientes. Tengo experiencia en el desarrollo de
+      aplicaciones con tecnologías como Flutter y Dart para dispositivos
+      móviles, y TypeScript con React para la web."
+    />
+    <meta
+      name="keywords"
+      content="Adel Suarez, portfolio, web developer, mobile developer"
+    />
+    <meta name="author" content="Adel Suarez" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#131313" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="Soy un desarrollador web y móvil apasionado por crear soluciones."
+    />
+    <meta property="og:image" content="/portfolio-web/bg_image_.png" />
+    <meta
+      property="og:url"
+      content="https://adelsuarez.github.io/portfolio-web/"
+    />
+    <meta property="og:type" content="website" />
+
     <title>{title}</title>
   </head>
   <body>
