@@ -11,6 +11,7 @@ interface Project {
   img: string;
   technologies: string[];
   type?: "mobile" | "windows";
+  alt?: string;
 }
 
 const colors = ["green", "cyan", "orange", "purple"];
@@ -25,6 +26,7 @@ const projects: Project[] = [
     img: "/bijiapp_cap1-min.png",
     technologies: ["Dart", "Flutter", "SQLite"],
     type: "mobile",
+    alt: "Image de bijiapp, mostrando la interfaz de la aplicación móvil",
   },
   {
     title: "Modulo 9",
@@ -35,6 +37,7 @@ const projects: Project[] = [
     img: "/m9_cap1-min.png",
     technologies: ["TypeScript", "React", "Firebase"],
     type: "windows",
+    alt: "Image de modulo 9, mostrando la interfaz de la aplicación web",
   },
   {
     title: "FarmaUcab",
@@ -45,6 +48,7 @@ const projects: Project[] = [
     img: "/farmaucab_cap1-min.png",
     technologies: ["Java", "SQLite"],
     type: "windows",
+    alt: "Image de farmaucab, mostrando la interfaz de la aplicación de escritorio",
   },
   {
     title: "InnovaTech",
@@ -55,6 +59,7 @@ const projects: Project[] = [
     img: "/innovatech_cap1-min.png",
     technologies: ["Figma"],
     type: "windows",
+    alt: "Image de Innovatech, mostrando el diseño de la aplicación web en Figma",
   },
 ];
 ---
@@ -79,7 +84,7 @@ const projects: Project[] = [
 
               <div class="technologies">
                 {project.technologies.map((tech) => (
-                  <Tag tech={tech} />
+                  <Tag tech={tech} alt={`icon de ${tech}`} />
                 ))}
               </div>
             </div>
@@ -87,7 +92,7 @@ const projects: Project[] = [
               <img
                 class={`${project.type}-img`}
                 src={`/portfolio-web${project.img}`}
-                alt=""
+                alt={project.alt || project.title}
               />
             </div>
           </article>

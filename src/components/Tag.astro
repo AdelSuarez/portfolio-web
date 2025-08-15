@@ -1,13 +1,14 @@
 ---
 interface Props {
   tech: string;
+  alt: string;
 }
 
-const { tech } = Astro.props;
+const { tech, alt } = Astro.props;
 ---
 
 <span class="icon-lenguage">
-  <img class="icon" src={`icons/${tech.toLowerCase()}_.svg`} alt="" />
+  <img class="icon" src={`icons/${tech.toLowerCase()}_.svg`} alt={alt} />
   {tech}
 </span>
 
